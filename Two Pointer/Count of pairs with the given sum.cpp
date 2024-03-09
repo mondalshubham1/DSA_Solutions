@@ -30,13 +30,9 @@ public:
                 if(m<n){
                     ans += (m-i+1)*(j-n+1);            // For Case 1a
                 }
-                else{                                  // For Case 1b
-                    int fact = 1;
-                    for(int k=1; k<=j-i ; k++)
-                        fact *= k;
-                    ans+=fact;
+                else{
+                    ans += ((j-i+1)*(j-i))/2;
                 }
-              
                 i = m+1;              // final update of new i & j which will hold true for any of the above two cases.
                 j = n-1;
             }
