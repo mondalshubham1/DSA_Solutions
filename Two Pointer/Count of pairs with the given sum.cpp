@@ -31,7 +31,7 @@ public:
                     ans += (m-i+1)*(j-n+1);            // For Case 1a
                 }
                 else{
-                    ans += ((j-i+1)*(j-i))/2;
+                    ans += ((j-i+1)*(j-i))/2;          // For Case 1b, which is basically n choose 2
                 }
                 i = m+1;              // final update of new i & j which will hold true for any of the above two cases.
                 j = n-1;
