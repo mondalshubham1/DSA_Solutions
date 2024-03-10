@@ -5,8 +5,8 @@ public:
     bool static distance(vector<int> a, vector<int> b){
         return (a[0]*a[0] + a[1]*a[1]) < (b[0]*b[0] + b[1]*b[1]);
 
-        // return true if a <= b
-        // return false if a > b
+        // return true if a < b
+        // return false if a >= b
     }
     vector<vector<int>> kClosest(vector<vector<int>>& points, int k) {
         vector<vector<int>> ans;
