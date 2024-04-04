@@ -7,8 +7,7 @@ public:
         for(int i=0; i<nums.size(); i++) {
             max_value = max(max_value, nums[i]);
         }
-        int ans = (max_value+k-1)*(max_value+k) - (max_value)*(max_value-1);
-        ans /= 2;
+        int ans = ((max_value+k-1)*(max_value+k) - (max_value)*(max_value-1))/2;
         return ans; 
     }
 };
