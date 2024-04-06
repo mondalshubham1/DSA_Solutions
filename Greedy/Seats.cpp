@@ -15,7 +15,7 @@ int Solution::seats(string A) {
         return 0;
     int median;
     
-    median = (index_vector[n/2]+index_vector[(n-1)/2])/2;                              // Find the median of all the positions where people are seated
+    median = (index_vector[n/2]+index_vector[(n-1)/2])/2;                              // Find the median of all the positions where people are seated, all people should moved towards that median index.
     
     int ans=0;
     int left_x=0;
