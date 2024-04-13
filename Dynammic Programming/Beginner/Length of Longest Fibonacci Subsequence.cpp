@@ -15,7 +15,7 @@ public:
             for(int i=j-1; i>=0; i--){
                 if(umap.find(arr[i] + arr[j]) == umap.end()){              // memset[i][j] = longest fibonacci subsequence with first element as ith index element and second element as jth index element. 
                     memset[i][j] = 2;                                      // once we have the first and second element defined, the whole sequence is defined.
-                }                                                          // memset[i][j] = 1 + memset[i][umap[arr[i]+arr[j]]]
+                }                                                          // memset[i][j] = 1 + memset[j][umap[arr[i]+arr[j]]]
                 else {
                     int next_index = umap[arr[i] + arr[j]];
                     memset[i][j] = 1+memset[j][next_index];
