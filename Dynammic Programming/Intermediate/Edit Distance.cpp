@@ -21,8 +21,8 @@ public:
                 }
                 else{                                                  // when last characters are not same.
                     vector<int> tmp{DP[i-1][j-1] , DP[i-1][j] , DP[i][j-1]};             // Case 1 : we replace the last character : DP[i-1][j-1] + 1
-                    sort(tmp.begin(), tmp.end());                                        // Case 2 : we insert a new character at the end : DP[i][j-1]
-                    DP[i][j] = 1+tmp[0];                                                 // Case 3 : we delete the last character from the end : DP[i-1][j]
+                    sort(tmp.begin(), tmp.end());                                        // Case 2 : we insert a new character at the end : DP[i][j-1] + 1
+                    DP[i][j] = 1+tmp[0];                                                 // Case 3 : we delete the last character from the end : DP[i-1][j] + 1
                 }
             }
         }
