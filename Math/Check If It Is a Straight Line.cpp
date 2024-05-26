@@ -9,7 +9,7 @@ public:
             int new_num = coordinates[i+1][1]-coordinates[i][1];
             int new_den = coordinates[i+1][0]-coordinates[i][0];
 
-            if(old_num*new_den != old_den*new_num)       // We won't be directly comparing the slopes as float comparisons can give to erroneous results
+            if(old_num*new_den != old_den*new_num)       // We won't be directly comparing the slopes as float comparisons can give to erroneous results.
                 return false;
         }
         return true;
