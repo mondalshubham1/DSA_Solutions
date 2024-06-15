@@ -15,17 +15,17 @@ public:
         while(left<=right) {
             mid=(left+right)/2;
 
-            if((nums[mid] != nums[mid-1]) && (nums[mid] != nums[mid+1])) {
+            if((nums[mid] != nums[mid-1]) && (nums[mid] != nums[mid+1])) {                      // When the mid element is neither equal to the left nor right, it means that element is the unique element
                 return nums[mid];
             }
 
-            if(mid%2 == 0){
-                if(nums[mid] == nums[mid+1])
+            if(mid%2 == 0){                   // means you have even number of elements to the left of mid, i.e. between left-----mid-1
+                if(nums[mid] == nums[mid+1])                // all elements to the left of mid are in pairs and unique element will be there to the right of mid
                     left=mid+2;
                 else
                     right = mid-2;
             }
-            else{
+            else{                            // means you have odd number of elements to the left of mid, i.e. between left-----mid-1
                 if(nums[mid] == nums[mid+1])
                     right=mid-1;
                 else 
