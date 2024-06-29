@@ -12,12 +12,12 @@ public:
         // Case 1 : When you choose the element at pos index
         partial_ans.push_back(nums[pos]);
         helper(pos+1, partial_ans, nums, ans);
-        partial_ans.pop_back();
+        partial_ans.pop_back();                // Cleaning step
 
-        // Case 2 : Don't choose nums[pos], and also make sure you never choose it
+        // Case 2 : Don't choose nums[pos], and also make sure you never choose it, hence we are skipping all the elements same as nums[pos]
         while(pos < nums.size()-1 && nums[pos]==nums[pos+1]) pos++;
-
         helper(pos+1, partial_ans, nums, ans);
+        
     } 
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
         sort(nums.begin(), nums.end());         // sort the elements so that the duplicate elements are adjacent
