@@ -6,7 +6,7 @@ public:
             return;
         }
         
-        unordered_set<int> u_set;       // that's tracking all the elements that has already been considered.
+        unordered_set<int> u_set;                    // that's tracking all the elements that has already been considered in the pos index.
         for(int i=pos; i<nums.size(); i++){
             if(u_set.find(nums[i]) == u_set.end())    // whether nums[i] has already been considered for that position or not.
             {
