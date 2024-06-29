@@ -4,7 +4,7 @@ class Solution {
 public:
     void helper(int pos, vector<int>& partial_ans, vector<int> nums, vector<vector<int>>& ans) {
         if(pos == nums.size()) {
-            ans.push_back(partial_ans);
+            ans.push_back(partial_ans);                 // Base case, no more elements to consider, store the partial_ans in a global ans variable.
             return;
         }
 
