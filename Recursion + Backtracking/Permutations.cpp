@@ -8,9 +8,9 @@ public:
         }
 
         for(int i=pos; i<nums.size(); i++){
-            swap(nums[pos], nums[i]);        // keeping all elements in the pos.
+            swap(nums[pos], nums[i]);        // keeping all elements in the pos index.
             helper(pos+1, nums, ans); 
-            swap(nums[i], nums[pos]);       // cleaning is done.
+            swap(nums[i], nums[pos]);        // cleaning is done.
         }
     }
 
