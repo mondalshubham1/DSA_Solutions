@@ -8,7 +8,7 @@ public:
             /*
               For each point, find the slopes of all other points with that fixed point.
               Make a map that keeps a count of all different slopes made with that fixed point. 
-              All the point haveing the same slope with that fixed point will all lie in the same line.
+              All the point having the same slope with that fixed point will all lie in the same line.
               So, we can find the slope of the line that passes through that given point and has maximum number of other points lying on it.
               Similarly we can find the same for all other points, and finally we take the max out of them as our answer.
             */
