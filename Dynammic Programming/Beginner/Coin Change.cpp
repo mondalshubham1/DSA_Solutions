@@ -6,8 +6,10 @@ public:
         vector<int> memo(amount+1, INT_MAX);
       
         /*
-          memo[i] = minimum coins needed for making i amount.
-          You choose each coin, say coins[j] and find the minimum coins needed to make the i-coins[j], then find the minimum among all of them 
+          memo[i] = minimum coins needed for making i amount.      i=0,1,2,3,.....,amount
+          You choose each coin, say coins[j] and find the minimum coins needed to make the i-coins[j],
+          or you may not choose coins[j], so the amount you need to make is i only
+          then find the minimum among all of them. 
           memo[i] = min(memo[i-coins[j]])  for all 0<=j<n
         */
       
