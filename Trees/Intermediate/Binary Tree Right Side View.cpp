@@ -24,18 +24,18 @@ public:
         int count=1;
 
         while(!q.empty()) {
-            for(int i=0; i<count; i++) {
+            for(int i=0; i<count; i++) {         // for each element in that level, push all its children in the queue that will be present in the next level.
                 TreeNode* tmp = q.front();
-                if(i==count-1)
+                if(i==count-1)                   // last element in that level.
                     ans.push_back(tmp->val);
 
                 if(tmp->left != NULL)
-                    q.push(tmp->left);
+                    q.push(tmp->left);          
                 if(tmp->right != NULL)
                     q.push(tmp->right);
                 q.pop();
             }
-            count = q.size();
+            count = q.size();              // count stores the number of elements in that level, the last value in each level I need to print.
         }
         return ans;
     }
