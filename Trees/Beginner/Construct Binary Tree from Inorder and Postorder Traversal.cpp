@@ -13,8 +13,9 @@
  */
 class Solution {
 public:
+    // Helper function takes a part of inorder array and a part of postorder array and creates a tree out of it and returns the root of the same.
     TreeNode* helperFunc(vector<int>& inorder, vector<int>& postorder, int inorder_i, int inorder_j, int postorder_i, int postorder_j) {
-        if(inorder_i > inorder_j){
+        if(inorder_i > inorder_j){             // Base condition
             return NULL;
         }
 
