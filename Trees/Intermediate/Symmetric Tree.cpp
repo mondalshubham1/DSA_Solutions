@@ -13,16 +13,16 @@
  */
 class Solution {
 public:
-    bool helper(TreeNode* p, TreeNode* q) {
+    bool mirrorImage(TreeNode* p, TreeNode* q) {       // returns me if tree rooted at p & q are mirror images of each other or not
         if(p == NULL || q == NULL){
             if(p==NULL && q==NULL)     // both p & q are NULL
                 return true;
             else                        // exactly one of them is NULL
                 return false;
         }
-        return (p->val==q->val) && helper(p->left, q->right) && helper(p->right, q->left);
+        return (p->val==q->val) && mirrorImage(p->left, q->right) && mirrorImage(p->right, q->left);
     }
     bool isSymmetric(TreeNode* root) {
-        return helper(root->left, root->right);
+        return mirrorImage(root->left, root->right);     // for the original tree, check whether left subtree and right subtree are mirror images or not.
     }
 };
