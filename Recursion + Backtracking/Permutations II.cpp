@@ -7,6 +7,8 @@ public:
         }
         
         unordered_set<int> u_set;                    // that's tracking all the elements that has already been considered in the pos index.
+
+        // If an element is already considered in pos index, I shouldn't put that element in the pos index again, because it'll cause a duplicate branch.
         for(int i=pos; i<nums.size(); i++){
             if(u_set.find(nums[i]) == u_set.end())    // whether nums[i] has already been considered for that position or not.
             {
