@@ -13,14 +13,15 @@
  */
 class Solution {
 public:
-    void helper(TreeNode* root) {
-        if(root == NULL)
+    void helper(TreeNode* root) {        // Given a tree rooted at root, this function inverts that tree.
+        if(root == NULL)                 // Base condition
             return;
 
-        invertTree(root->left);
-        invertTree(root->right);
-        swap(root->left, root->right);
+        invertTree(root->left);         // invert the left subtree
+        invertTree(root->right);        // invert the right subtree
+        swap(root->left, root->right);  // swap the pointers of the left and right subtree
     } 
+
     TreeNode* invertTree(TreeNode* root) {
         helper(root);
         return root;
