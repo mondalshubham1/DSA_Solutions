@@ -17,11 +17,6 @@ public:
   // else if the new element is smaller than the top element of min heap, then it never can be the kth largest element as we already have k elements greater than that new element.
             }
         }
-            
-
-        // for(int i=0; i<k-1; i++)
-        //     pq.pop();
-
         return pq.top();
     }
 };
