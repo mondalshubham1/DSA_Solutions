@@ -12,7 +12,7 @@ public:
             DP[i][0] = i;                                              // convert i characters to 0 length, you'll have to remove characters i times.
 
         for(int j=0; j<=m; j++)                                            
-            DP[0][j] = j;                                              // convert 0 character to i length, you'll have to insert characters i times.
+            DP[0][j] = j;                                              // convert 0 character to j length, you'll have to insert characters j times.
 
         for(int j=1; j<=m; j++){
             for(int i=1; i<=n; i++){
