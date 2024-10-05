@@ -10,7 +10,7 @@ public:
             int mid = (left + right)/2;
 
             if(nums[mid] < nums[mid-1])              // When the mid element is lesser than the previous element then that's the answer
-                return nums[mid];
+                return nums[mid];                    // Only the minimum element satisfies this property.
 
             if(nums[mid] > nums[right])              // In this case the minimum value lies on the right side of mid
                 left = mid+1;
