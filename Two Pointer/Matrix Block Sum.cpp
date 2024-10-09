@@ -16,14 +16,6 @@ public:
                 prefix_sum[i][j] += prefix_sum[i][j-1]+mat[i][j];
             }
         }
-
-        for(int i=0; i<row; i++) {
-            for(int j=0; j<col; j++) {
-                cout << prefix_sum[i][j] << " ";
-            }
-            cout << endl;
-        }
-
         vector<vector<int>> ans(row, vector<int>(col, 0));
 
         for(int i=0; i<row; i++) {
