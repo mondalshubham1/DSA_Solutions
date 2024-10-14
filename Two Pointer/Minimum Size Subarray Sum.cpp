@@ -16,7 +16,7 @@ public:
                 j++;
                 window_sum+=nums[j]; 
             }
-            if(window_sum<target)                              // even after the above loop you cannot make window sum greater than or equal to zero means you can never make it.
+            if(window_sum<target)                              // even after the above loop you cannot make window sum greater than or equal to target means you can never make it.
                 break;
             ans = min(ans, j-i+1);                 // For that i, i upto j is the smallest window that has sum more than or equal to target.
             window_sum -= nums[i];                 
