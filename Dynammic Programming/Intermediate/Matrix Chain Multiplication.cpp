@@ -4,13 +4,15 @@ class Solution{
 public:
 
     /*
-        We need to find the minimum computations to do for Ai*Ai+1*Ai+2*Ai+3...........Aj-1Aj
+        We need to find the minimum computations to do for Ai*Ai+1*Ai+2*Ai+3...........Aj-1*Aj
         We need to find all possible ways it can be done by partitioning
         First partition would be (Ai)*(Ai+1*Ai+2*Ai+3...........Aj-1*Aj)
         Next would be (Ai*Ai+1)*(Ai+2*Ai+3...........Aj-1*Aj)
         Next would be (Ai*Ai+1*Ai+2)*(Ai+3...........Aj-1*Aj)
         ....
         Last would be (Ai*Ai+1*Ai+2*Ai+3...........Aj-1)*(Aj)
+
+        helper function returns the minimum number of multiplications you'll have to do to Ai*Ai+1*Ai+2*Ai+3...........Aj-1*Aj
     */
 
     int helper(int arr[], int i, int j, vector<vector<int>>& dp) {
