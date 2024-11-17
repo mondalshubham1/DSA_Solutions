@@ -10,8 +10,8 @@ public:
             int mid = (left+right)/2;
             if(nums[mid] == target) return mid;
             
-            if(nums[mid] < nums[right]) {        // Case 1 : mid element is among the smaller elements
-                if(target > nums[mid] && target <= nums[right]){
+            if(nums[mid] < nums[right]) {                                     // Case 1 : mid element is among the smaller elements
+                if(target > nums[mid] && target <= nums[right]){           
                     left = mid+1;
                 }
                 else
