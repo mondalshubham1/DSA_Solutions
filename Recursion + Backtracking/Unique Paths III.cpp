@@ -2,7 +2,7 @@
 
 class Solution {
 public:
-    void helper(int i, int j, vector<vector<int>>& grid, int& count, int empty_sq, int &ans){
+    void helper(int i, int j, vector<vector<int>>& grid, int& count, int empty_sq, int& ans){
         // i, j is the starting point, grid is the input matrix, count stores the number of empty squares I've encountered in the path before reaching (i,j)
         
         count++;          // I'll land in that i,j if that's a non-obstacle square.
