@@ -46,7 +46,7 @@ public:
         int empty_sq = 0;
         for(int i=0; i<grid.size(); i++){
             for(int j=0; j<grid[0].size(); j++){
-                if(grid[i][j] >= 0)   // 0, 1, 2 all are non-onstacle.
+                if(grid[i][j] >= 0)   // 0, 1, 2 all are non-obstacle.
                     empty_sq++;
             }
         }        // count number of non-obstacle points, how many 0's are there
