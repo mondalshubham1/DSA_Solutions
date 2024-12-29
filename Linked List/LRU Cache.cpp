@@ -1,6 +1,6 @@
 // Problem Link : https://leetcode.com/problems/lru-cache/description/
 
-class Node {
+class Node {     // Double LinkedList is maintained with recent elements at the front and old elements at the back.
 public:
     int key;
     int value;
@@ -10,15 +10,15 @@ public:
 };
 class LRUCache {
 public:
-    unordered_map<int, Node*> addressMap;
+    unordered_map<int, Node*> addressMap;        // stores the key and the corresponding node's address
     Node* head=NULL;
     Node* tail=NULL;
     int capacity=0;
 
     LRUCache(int capacity) {
         this->capacity = capacity;
-        head = new Node(-1,-1);
-        tail = new Node(-1,-1);
+        head = new Node(-1,-1);    // dummy nodes
+        tail = new Node(-1,-1);  
         head->next = tail;
         tail->prev = head;
     }
@@ -40,7 +40,7 @@ public:
         tmp->prev = node;
     }
 
-    void extractNode(Node* node) {
+    void extractNode(Node* node) {       // remove the node from that place
         Node* nextNode = node->next;
         Node* prevNode = node->prev;
 
@@ -55,14 +55,14 @@ public:
         if(addressMap.find(key) != addressMap.end()) {
             Node* node = addressMap[key];
             extractNode(node);
-            node->value = value;
+            node->value = value;     // change the value
             insertAtFront(node);
         } 
         else {
-            if(addressMap.size()>=this->capacity){
+            if(addressMap.size()>=this->capacity){      // If the capacity of the cache is full, delete the oldest node (tail->prev)
                 Node* node = tail->prev;
                 extractNode(node);
-                addressMap.erase(node->key);
+                addressMap.erase(node->key);            // as I'm deleting, also remove it from map
                 delete node;
             }
             Node* node = new Node(key, value);
