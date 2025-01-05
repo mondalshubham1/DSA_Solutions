@@ -18,10 +18,10 @@ public:
             return;
         
         inOrderTraversal(root->left, depth+1, desiredDepth, val);
-        if(depth == desiredDepth){
+        if(depth == desiredDepth){     // Whenever I reach the proper depth where I need to add those new nodes, I perform the following steps
             TreeNode* tmpLeft = root->left;
-            root->left = new TreeNode(val);
-            root->left->left = tmpLeft;
+            root->left = new TreeNode(val);     // New node that I had to add
+            root->left->left = tmpLeft;     
 
             TreeNode* tmpRight = root->right;
             root->right = new TreeNode(val);
