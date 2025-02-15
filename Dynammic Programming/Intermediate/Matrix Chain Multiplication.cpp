@@ -33,10 +33,14 @@ public:
         
         return mini;
     }
+    // Example : arr = [20, 10, 30, 40]
+    // M0 = arr[0]*arr[1]  ==> 20x10
+    // M1 = arr[1]*arr[2]  ==> 10x30
+    // Mi = arr[i]xarr[i+1]
     
     int matrixMultiplication(int N, int arr[])
     {
-        vector<vector<int>> dp(N-1, vector<int>(N-1, -1));
+        vector<vector<int>> dp(N-1, vector<int>(N-1, -1));    
         
         return helper(arr, 0, N-2, dp);
     }
