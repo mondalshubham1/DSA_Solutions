@@ -1,4 +1,5 @@
 // Problem Link : https://codeforces.com/problemset/problem/299/A
+
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
