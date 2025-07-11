@@ -46,7 +46,7 @@ Designed for **last-minute revision** and **high-impact preparation**, this repo
 
 ## 🛠️ How to Use
 
-1. Browse by topic or language (`C++` / `Java`)
+1. Browse by topic
 2. Read through code + inline explanations
 3. Run locally or practice on the original platform
 4. ⭐ Star the repo to bookmark for your "zero hour"!
